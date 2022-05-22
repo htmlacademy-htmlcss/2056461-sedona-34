@@ -2,23 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Каталог</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="page-logo" href="https://htmlacademy.ru/">
+      <a class="page-logo" href="index.html">
         <img class="page-logo-img" src="#" alt="Логотип города Седона">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Главная</a>
+            <a href="index.html" class="navigation-link">Главная</a>
           </li>
           <li class="navigation-item">
             <a href="#" class="navigation-link">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Гостиницы</a>
+            <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -35,13 +35,58 @@
       </nav>
     </header>
     <main class="main-catalog">
+      <header class="catalog-header">
+        <h1 class="catalog-header-title">Гостиницы Седоны</h1>
+        <ul class="breadcrums">
+          <li class="breadcrums-item">
+            <a class="breadcrums-link visually-hidden" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrums-item">
+            <a class="breadcrums-link">Гостиницы</a>
+          </li>
+          <section class="catalog-header-filter">
+            <h2 class="visually-hidden">Фильтры</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="catalog-header-filter-group">
+                <legend class="catalog-header-filter-legend">Инфраструктура:</legend>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="checkbox" name="swimming-pool" checked>Бассеин
+                </label>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="checkbox" name="parking" checked>Парковка
+                </label>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="checkbox" name="Wi-Fi">Wi-Fi
+                </label>
+              </fieldset>
+              <fieldset class="catalog-header-filter-group">
+                <legend class="catalog-header-filter-legend">Тип Жилья:</legend>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="radio" name="accomodation-type" checked>Гостиница
+                </label>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="radio" name="accomodation-type">Мотель
+                </label>
+                <label class="catalog-header-filter-lable">
+                  <input class="catalog-header-filter-checkbox" type="radio" name="accomodation-type">Апартаменты
+                </label>
+              </fieldset>
+              <fieldset class="catalog-header-filter-group">
+                <legend class="catalog-header-filter-legend">Стоимость, ₽:</legend>
+              </fieldset>
+              <button class="catalog-header-filter-submit" type="submit">ПРИМЕНИТЬ</button>
+              <button class="catalog-header-filter-reset" type="reset">Сбросить</button>
+            </form> 
+          </section>
+        </ul>
+      </header>
     </main>
     <footer class="page-footer">
       <section class="page-footer-subscription">
         <h2 class="page-footer-subscription-title">Подпишитесь на рассылку</h2>
         <p class="page-footer-subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="page-footer-subscription-form" action="https://echo.htmlacademy.ru" method="post">
-          <input calss="page-footer-subscription-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
+          <input class="page-footer-subscription-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
           <button class="page-footer-subscription-button">Подписаться</button>
         </form>
       </section>
