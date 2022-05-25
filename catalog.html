@@ -22,16 +22,14 @@
           </li>
         </ul>
         <ul class="navigation-user-list">
-            <li class="navigation-user-item">
-              <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
-            </li>
-            <li class="navigation-user-item">
-              <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
-            </li>
-            <li class="navigation-user-item">
-              <button class="button-navigation">Хочу сюда!</button>
-            </li>
+          <li class="navigation-user-item">
+            <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
+          </li>
+          <li class="navigation-user-item">
+            <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
+          </li>
         </ul>
+        <button class="button-navigation">Хочу сюда!</button>
       </nav>
     </header>
     <main class="main-catalog">
@@ -78,43 +76,51 @@
                 </li>
                 <li class="filter-item">
                   <label class="filter-label">
-                    <input class="filter-radio" type="radio" name="accomodation-type" checked>Мотель
+                    <input class="filter-radio" type="radio" name="accomodation-type">Мотель
                   </label>
                 </li>
                 <li class="filter-item">
                   <label class="filter-label">
-                    <input class="filter-radio" type="radio" name="accomodation-type" checked>Апартаменты
+                    <input class="filter-radio" type="radio" name="accomodation-type">Апартаменты
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-legend">Стоимость, ₽:</legend>
-              <output class="filter-output" name="min-cost">от</output>
-              <output class="filter-output" name="max-cost">до</output>
-              <input class="filter-range" type="range" min="0">
+              <!--Добавить ценовой диапозон-->
             </fieldset>
-            <button class="button-filter-submit" type="submit">ПРИМЕНИТЬ</button>
+            <button class="button-filter-submit" type="submit">Применить</button>
             <button class="button-filter-reset" type="reset">Сбросить</button>
           </form>
         </section>
       </header>
-      <section class="catalog-search-result">
-        <h2 class="search-result-title">Найдено гостиниц: 38</h2>
-        <select class="search-result-select" aria-label="Сортировка">
+      <section class="catalog-search-filter">
+        <h2 class="search-filter-title">Найдено гостиниц: 38</h2>
+        <select class="search-filter-select" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensieve">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <a class="search-result-view-button selected" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="search-result-view-button" href="#">
-          <span class="visually-hidden">Растянуть на весь экран</span>
-        </a>
-        <a class="search-result-view-button" href="#">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <ul class="search-filter-list">
+          <li class="search-filter-item">
+            <a class="search-filter-view-button selected" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="search-filter-item">
+            <a class="search-filter-view-button" href="#">
+              <span class="visually-hidden">Растянуть на весь экран</span>
+            </a>
+          </li>
+          <li class="search-filter-item">
+            <a class="search-filter-view-button" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog-search-result">
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="product.html">
@@ -123,8 +129,8 @@
             </a>
             <span class="product-card-text">Гостиница</span>
             <b class="product-card-text">От 4000 ₽</b>
-            <a class="product-card-info-button" href="#">ПОДРОБНЕЕ</a>
-            <a class="product-card-bookmark-button" href="#">В ИЗБРАННОЕ</a>
+            <a class="product-card-info-button" href="#">Подробнее</a>
+            <a class="product-card-bookmark-button" href="#">В избранное</a>
             <span class="product-card-raiting">Рейтинг: 8,5</span>
           </li>
           <li class="product-card">
@@ -134,8 +140,8 @@
             </a>
             <span class="product-card-text">Гостиница</span>
             <b class="product-card-text">От 5000 ₽</b>
-            <a class="product-card-info-button" href="#">ПОДРОБНЕЕ</a>
-            <a class="product-card-bookmark-button marked" href="#">В ИЗБРАННОМ</a>
+            <a class="product-card-info-button" href="#">Подробнее</a>
+            <a class="product-card-bookmark-button marked" href="#">В избранном</a>
             <span class="product-card-raiting">Рейтинг: 9,2</span>
           </li>
           <li class="product-card">
@@ -145,8 +151,8 @@
             </a>
             <span class="product-card-text">Гостиница</span>
             <b class="product-card-text">От 2500 ₽</b>
-            <a class="product-card-info-button" href="#">ПОДРОБНЕЕ</a>
-            <a class="product-card-bookmark-button" href="#">В ИЗБРАННОЕ</a>
+            <a class="product-card-info-button" href="#">Подробнее</a>
+            <a class="product-card-bookmark-button" href="#">В избранное</a>
             <span class="product-card-raiting">Рейтинг: 6,9</span>
           </li>
           <li class="product-card">
@@ -156,40 +162,50 @@
             </a>
             <span class="product-card-text">Гостиница</span>
             <b class="product-card-text">От 1500 ₽</b>
-            <a class="product-card-info-button" href="#">ПОДРОБНЕЕ</a>
-            <a class="product-card-bookmark-button" href="#">В ИЗБРАННОЕ</a>
+            <a class="product-card-info-button" href="#">Подробнее</a>
+            <a class="product-card-bookmark-button" href="#">В избранное</a>
             <span class="product-card-raiting">Рейтинг: 5,0</span>
           </li>
         </ul>
       </section>
-      <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link">2</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link">3</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link">4</a>
-        </li>
-        <li class="pagination-item">
-          <button class="pagination-link more-results" type="button">...</button>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link">10</a>
-        </li>
-      </ul>
+      <section class="pagination">
+        <h2 class="visually-hidden">Пагинация</h2>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">4</a>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-link more-results" type="button">...</button>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">10</a>
+          </li>
+        </ul>
+        <p class="page-result-total">Гостиниц на странице:</p>
+        <select class="page-result-select" aria-label="Сортировка">
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+        </select>
+      </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer-subscription">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="subscription-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
-          <button class="subscription-button">Подписаться</button>
+      <section class="page-footer-subscription alternative-footer-background">
+        <h2 class="subscription-title alternative-footer-font">Подпишитесь на рассылку</h2>
+        <p class="subscription-text alternative-footer-font">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription-form alternative-footer-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="subscription-field alternative-footer-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
+          <button class="subscription-button alternative-footer-button">Подписаться</button>
         </form>
       </section>
       <section class="page-footer-social">

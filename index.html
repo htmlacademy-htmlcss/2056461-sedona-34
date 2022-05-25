@@ -28,27 +28,41 @@
             <li class="navigation-user-item">
               <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
             </li>
-            <li class="navigation-user-item">
-              <button class="button-navigation">Хочу сюда!</button>
-            </li>
         </ul>
+        <button class="button-navigation">Хочу сюда!</button>
       </nav>
     </header>
     <main class="main-index">
-      <section class="main-index-intro">
+      <section class="main-index-greeding">
         <h1 class="visually-hidden">Сайт туристического города Седона</h1>
-        <img class="main-index-banner" src="#" alt="панорамный вид на каньоны Седоны и текст приветствие: добро пожаловать в прекрасную Седону, потому что Большой каньон отстой!">
-        <p class="main-index-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="main-index-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <img class="index-lettering" src="#" alt="Леттеринг приветствие: добро пожаловать в прекрасную Седону, потому что Большой каньон отстой!">
       </section>
       <section class="idex-benefits">
         <h2 class="visually-hidden">Наши преимущества</h2>
+        <p class="main-index-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="main-index-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         <ol class="benefits-list">
           <li class="benefits-point">
             <h3 class="benefits-point-title">Настоящий городок</h3>
             <p class="benefits-point-text"><b class="benefits-point-number">-№1-</b>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="benefits-img" src="#" alt="Здания исторического центра города Седона">
+            <ul class="serviece-list">
+              <li class="serviece-list-item">
+                <h4 class="srviece-list-item-title">Жильё</h4>
+                <p class="serviece-list-item-text">Рекомендуем пожитьв настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="serviece-list-item">
+                <h4 class="srviece-list-item-title">Еда</h4>
+                <p class="serviece-list-item-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="serviece-list-item">
+                <h4 class="srviece-list-item-title">Сувениры</h4>
+                <p class="serviece-list-item-text">Не только китайского, но и настоящего местного производства!</p>
+              </li>
+            </ul>
           </li>
           <li class="benefits-point">
+            <img class="benefits-img" src="#" alt="Знаменитый каньон вблизи города Седона">
             <h3 class="benefits-point-title">Там есть мост дьявола</h3>
             <p class="benefits-point-text"><b class="benefits-point-number">-№2-</b>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
@@ -65,31 +79,12 @@
             <p class="benefits-point-text"><b class="benefits-point-number">-№5-</b>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
-        <img class="benefits-img" src="#" alt="Здания исторического центра города Седона">
-        <img class="benefits-img" src="#" alt="Знаменитый каньон вблизи города Седона">
-      </section>
-      <section class="servieces">
-        <h2 class="visually-hidden">Услуги</h2>
-        <ul class="serviece-list">
-          <li class="serviece-list-item">
-            <h3 class="srviece-list-item-title">Жильё</h3>
-            <p class="serviece-list-item-text">Рекомендуем пожитьв настоящем мотеле, всё как в кино!</p>
-          </li>
-          <li class="serviece-list-item">
-            <h3 class="srviece-list-item-title">Еда</h3>
-            <p class="serviece-list-item-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="serviece-list-item">
-            <h3 class="srviece-list-item-title">Сувениры</h3>
-            <p class="serviece-list-item-text">Не только китайского, но и настоящего местного производства!</p>
-          </li>
-        </ul>
       </section>
       <section class="action">
         <h2 class="visually-hidden">Бронирование</h2>
         <p class="action-question">Заинтересовались?</p>
         <p class="action-text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="button-booking">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+        <button class="button-booking">Поиск гостиницы в Седоне</button>
       </section>
     </main>
     <footer class="page-footer">
@@ -97,6 +92,7 @@
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden">Форма подписки на новости</label>
           <input class="subscription-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
           <button class="subscription-button">Подписаться</button>
         </form>
