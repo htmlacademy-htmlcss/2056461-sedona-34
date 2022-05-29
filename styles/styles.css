@@ -23,6 +23,8 @@ body {
   background-color: #ffffff;
 }
 
+/* Кнопки */
+
 .button {
   font-family: inherit;
   font-size: 20px;
@@ -43,6 +45,22 @@ body {
   background-color: #82B3D3;
 }
 
+.filter-submit {
+  background-color: #82B3D3;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filter-reset {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/* Навигация */
+
 .navigation-link,
 .navigation-user-link {
   font-weight: 700;
@@ -51,6 +69,8 @@ body {
   text-align: left;
   text-decoration: none;
 }
+
+/* Главная текстовые блоки */
 
 .main-index,
 .page-footer-subscription {
@@ -79,6 +99,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+/* Преимущества */
 
 .benefits-point-title,
 .srviece-list-item-title {
@@ -119,17 +141,26 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+/* Форма подписки */
+
 .page-footer-subscription {
   background-color: #82B3D3;
+  color: #ffffff;
   background-image: url(/images/subscription-area-background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
-.subscription-title,
-.subscription-text {
-  color: #ffffff;
+.alternative-footer-background {
+  background-color: #ffffff;
+  background-image: none;
 }
+
+.alternative-footer-font {
+  color: #000000;
+}
+
+/* Контакты */
 
 .contacts-phone {
   font-family: inherit;
@@ -142,8 +173,47 @@ body {
   text-decoration: none;
 }
 
+/* Фильтр */
 
+.filter-wrapper {
+  background-color: #756157;
+  color: #ffffff;
+  background-image: url(/images/index-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
 
+.catalog-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrums {
+  font-size: 16px;
+  line-height: 21px;
+  list-style-type: none;
+}
+
+.breadcrums-link {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.filter-group {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.filter-legend {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  border: none;
+}
 
 
 
