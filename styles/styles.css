@@ -31,7 +31,8 @@ body {
   background-color: #ffffff;
 }
 
-/*.visually-hidden {
+/*
+.visually-hidden {
   display: none;
 }
 */
@@ -77,6 +78,12 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-transform: none;
+}
+
+.button.booking {
+  padding: 0;
+  margin: 0 auto;
+  width: 574px;
 }
 
 /* Header */
@@ -143,6 +150,7 @@ body {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  padding: 51px 0 82px;
 }
 
 .index-lettering {
@@ -159,9 +167,14 @@ body {
   text-transform: uppercase;
 }
 
+.benefits-title {
+  margin: 0;
+  padding: 63px 0 90px;
+}
+
 .main-index-slogan {
   width: 620px;
-  margin: 0 auto;
+  margin: 0 auto 31px;
   padding: 0;
   text-align: center;
 }
@@ -174,6 +187,8 @@ body {
 }
 
 /* Adventages */
+
+
 
 .benefits-list {
   display: flex;
@@ -252,6 +267,26 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+/* Action form */
+
+.action {
+  margin: 0;
+  padding: 91px 0 93px;
+}
+
+.action-question {
+  margin: 0 auto 29px;
+  padding: 0;
+  width: 297px;
+}
+
+.action-text {
+  margin: 0 auto 56px;
+  padding: 0;
+  width: 592px;
+}
+
+
 /* Subscription form */
 
 .page-footer-subscription {
@@ -269,19 +304,6 @@ body {
 
 .alternative-footer-font {
   color: #000000;
-}
-
-/* Contacts */
-
-.contacts-phone {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 400;
-  color: #000000;
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  text-decoration: none;
 }
 
 /* Filter */
@@ -394,5 +416,61 @@ body {
   line-height: 21px;
 }
 
+/* Page Footer */
 
+.page-footer-subscription {
+  margin: 0;
+  padding: 94px 0;
+}
 
+.subscription-title {
+  margin: 0 auto 29px;
+  width: 404px;
+}
+
+.subscription-text {
+  margin: 0 auto 46px;
+  width: 475px;
+}
+
+.subscription-form {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.page-contacts-wrapper {
+  display: flex;
+  width: 1060px;
+  padding: 40px 70px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list {
+  display: flex;
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer-contacts {
+  width: 331px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-phone {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.page-footer-developer {
+  display: block;
+}

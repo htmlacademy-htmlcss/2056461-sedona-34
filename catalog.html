@@ -13,24 +13,26 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="/index.html" class="navigation-link">Главная</a>
+            <a class="navigation-link">Главная</a>
           </li>
           <li class="navigation-item">
             <a href="#" class="navigation-link">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиницы</a>
+            <a href="catalog.html" class="navigation-link">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user-list">
-          <li class="navigation-user-item">
-            <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
-          </li>
-          <li class="navigation-user-item">
-            <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
-          </li>
-        </ul>
-        <button class="button navigation">Хочу сюда!</button>
+        <div class="navigation-user-list-wrapper">
+          <ul class="navigation-user-list">
+            <li class="navigation-user-item">
+              <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
+            </li>
+            <li class="navigation-user-item">
+              <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
+            </li>
+          </ul>
+          <button class="button navigation">Хочу сюда!</button>
+        </div>
       </nav>
     </header>
     <main class="main-catalog">
@@ -212,29 +214,33 @@
           <button class="button subscription">Подписаться</button>
         </form>
       </section>
-      <section class="page-footer-social">
-        <h2 class="visually-hidden">Соцсети</h2>
-        <ul class="social-list">
-          <li class="social-item">
-            <a class="visually-hidden" href="https://vk.com/htmlacademy">Вконтакте</a>
-          </li>
-          <li class="social-item">
-            <a class="visually-hidden" href="https://t.me/htmlacademy">Телеграм</a>
-          </li>
-          <li class="social-item">
-            <a class="visually-hidden" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
-          </li>
-        </ul>
-      </section>
-      <section class="page-footer-contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <address class="contacts-address">
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </address>
-        <a class="contacts-developer" href="https://htmlacademy.ru/">
-          <img class="contacts-developer-logo" src="images/logo-htmlacademy.svg" width="115" height="34" alt="Логотип студии разработчика HTMLacademy">
-        </a>
-      </section>
+      <div class="page-contacts-wrapper">
+        <section class="page-footer-social">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <ul class="social-list">
+            <li class="social-item">
+              <a class="visually-hidden" href="https://vk.com/htmlacademy">Вконтакте</a>
+            </li>
+            <li class="social-item">
+              <a class="visually-hidden" href="https://t.me/htmlacademy">Телеграм</a>
+            </li>
+            <li class="social-item">
+              <a class="visually-hidden" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <address class="contacts-address">
+            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </address>
+        </section>
+        <section class="page-footer-developer">
+          <a class="contacts-developer" href="https://htmlacademy.ru/">
+            <img class="contacts-developer-logo" src="images/logo-htmlacademy.svg" width="115" height="34" alt="Логотип студии разработчика HTMLacademy">
+          </a>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
