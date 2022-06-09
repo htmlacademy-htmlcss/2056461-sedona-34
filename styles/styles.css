@@ -56,7 +56,7 @@ body {
   text-align: center;
 }
 
-.navigation {
+.button.navigation {
   font-size: 16px;
   line-height: 20px;
 }
@@ -81,15 +81,44 @@ body {
 
 /* Header */
 
-.page-header,
-.navigation {
+.page-header {
   display: flex;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0 70px;
+}
+
+.header-logo {
+  display: block;
+  margin: 0;
+  margin-right: 30px;
 }
 
 .navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   margin: 0;
-  margin-left: 30px;
+  padding: 0;
+}
+
+.navigation-list {
+  width: 520px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user-list-wrapper {
+  width: 264px;
+  display: flex;
+}
+
+.navigation-user-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navigation-link,
@@ -99,28 +128,6 @@ body {
   color: #000000;
   text-align: left;
   text-decoration: none;
-}
-
-.header-logo {
-  margin: 0;
-  margin-left: 70px;
-}
-
-.navigation-list,
-.navigation-user-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.navigation-list {
-  width: 520px;
-}
-
-.navigation-user-list {
-  width: 264px;
-  margin-left: auto;
 }
 
 /* Index text blocks */
