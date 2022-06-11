@@ -58,8 +58,8 @@ body {
   text-align: center;
 }
 
-.button.navigation {
-  width: 160px;
+.button.navigation-booking {
+  min-width: 130px;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
@@ -87,7 +87,7 @@ body {
 .button.booking {
   padding: 0;
   margin: 0 auto;
-  width: 574px;
+  min-width: 574px;
 }
 
 /* Header */
@@ -100,8 +100,7 @@ body {
 
 .header-logo {
   display: block;
-  margin: 0;
-  margin-right: 30px;
+  margin: 0 30px 0 0;
 }
 
 .navigation {
@@ -169,6 +168,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .benefits-title {
@@ -177,14 +177,12 @@ body {
 }
 
 .main-index-slogan {
-  width: 620px;
   margin: 0 auto 31px;
   padding: 0;
   text-align: center;
 }
 
 .main-index-text {
-  width: 655px;
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -263,7 +261,7 @@ body {
 
 .serviece-list {
   color: #000000;
-  background-color: #ffffff;;
+  background-color: #ffffff;
 }
 
 .serviece-list-item:nth-child(1),
@@ -281,13 +279,11 @@ body {
 .action-question {
   margin: 0 auto 29px;
   padding: 0;
-  width: 297px;
 }
 
 .action-text {
   margin: 0 auto 56px;
   padding: 0;
-  width: 592px;
 }
 
 
@@ -406,12 +402,11 @@ body {
 }
 
 .search-filter-title {
-  width: 338px;
+  min-width: 340px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0;
-  margin-right: 191px;
+  margin: 0 191px 0 0;
   padding: 0;
 }
 
@@ -420,8 +415,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  margin: 0;
-  margin-right: 78px;
+  margin: 0 78px 0 0;
   padding: 0;
 }
 
@@ -524,8 +518,7 @@ body {
 
 .page-result-total {
   width: 175px;
-  margin: 0;
-  margin-right: 51px;
+  margin: 0 51px 0 0;
   padding: 0;
 }
 
@@ -544,12 +537,10 @@ body {
 
 .subscription-title {
   margin: 0 auto 29px;
-  width: 404px;
 }
 
 .subscription-text {
   margin: 0 auto 46px;
-  width: 475px;
 }
 
 .subscription-form {
@@ -559,7 +550,6 @@ body {
 
 .page-contacts-wrapper {
   display: flex;
-  width: 1060px;
   padding: 40px 70px 30px;
   justify-content: space-between;
   align-items: center;
