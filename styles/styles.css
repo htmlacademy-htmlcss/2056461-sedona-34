@@ -513,6 +513,8 @@ body {
 
 .product-card-img {
   margin: 0 0 16px;
+  object-fit: contain;
+  background-color: #ffffff;
 }
 
 .product-card-title {
