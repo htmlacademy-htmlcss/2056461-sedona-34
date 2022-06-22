@@ -19,16 +19,22 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  width: 1200px;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
+  background-color: #E5E5E5;
+
+}
+
+.body-container {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   background-color: #ffffff;
 }
 
@@ -254,22 +260,21 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.srviece-list-item-title {
+  width: 230px;
   text-align: center;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
 }
 
 .benefits-point-text,
 .serviece-list-item-text {
+  width: 230px;
   font-size: 18px;
   line-height: 21px;
 }
 
 .serviece-list-item-text {
   text-align: center;
-  margin: 0 0 81px;
+  margin: 0 auto 81px;
 }
 
 .benefits-point:nth-child(1),
@@ -297,11 +302,6 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.benefits-point-title {
-  text-align: center;
-  margin:  0 0 30px;
-}
-
 .benefits-point-number {
   display: block;
   margin: 0 auto 30px;
@@ -309,7 +309,7 @@ body {
 
 .benefits-point-text {
   text-align: center;
-  margin: 0 0 92px;
+  margin: 0 auto 92px;
 }
 
 /* Action form */
@@ -482,21 +482,24 @@ body {
 /* Catalog */
 
 .product-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
   width: auto;
-  flex-wrap: wrap;
-  margin: 0 71px 66px;
-  padding: 0;
+  column-gap: 18px;
+  margin: 0;
+  padding: 0 72px 66px;
   list-style: none;
 }
 
 .product-card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: auto auto auto auto;
+  gap: 16px 20px;
+  padding: 20px;
   width: 340px;
   margin: 0;
-}
-
-.product-card:not(:nth-of-type(3n)) {
-  margin-right: 18px;
+  box-sizing: border-box;
 }
 
 .product-card-link {
@@ -505,6 +508,15 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-decoration: none;
+  grid-column: 1/-1;
+}
+
+.product-card-img {
+  margin: 0 0 16px;
+}
+
+.product-card-title {
+  margin: 0;
 }
 
 .product-card-text {
@@ -532,6 +544,7 @@ body {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  grid-column: 2/3;
 }
 
 /* Pagination */
