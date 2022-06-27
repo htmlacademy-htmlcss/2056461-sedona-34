@@ -461,7 +461,16 @@ body {
 }
 
 .breadcrums-item {
-  margin: auto 26px auto 0;
+  display: flex;
+  margin: auto 10px auto 0;
+}
+
+.breadcrums-item::after {
+  content: url("../images/breadcrub-slash.svg");
+}
+
+.breadcrums-item:last-child::after {
+  content: none;
 }
 
 .breadcrums-link {
@@ -472,24 +481,11 @@ body {
   font-size: inherit;
   line-height: inherit;
   text-decoration: none;
-
-}
-
-.breadcrums-link::before {
-  position: absolute;
-  content: url(../images/breadcrub-slash.svg);
-  top: auto;
-  bottom: auto;
-  left: -16px;
-}
-
-
-
-.breadcrums-item:first-child .breadcrums-link::before {
-  content: none;
+  margin-right: 10px;
 }
 
 .breadcrums-icon {
+  display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
