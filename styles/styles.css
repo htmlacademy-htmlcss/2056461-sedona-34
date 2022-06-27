@@ -59,6 +59,7 @@ body {
 /* Buttons */
 
 .button {
+  display: inline-block;
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
@@ -67,23 +68,24 @@ body {
   background-color: #756157;
   text-transform: uppercase;
   text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.button.navigation-booking {
+.navigation-booking {
   min-width: 160px;
   font-size: 16px;
   line-height: 20px;
-  margin: 0;
-}
-
-.subscription {
-  background-color: #82B3D3;
+  margin: 14px 0 19px;
+  padding: 9px 15px 8px;
 }
 
 .filter-submit {
   background-color: #82B3D3;
   font-size: 16px;
   line-height: 20px;
+  padding: 14px 15px;
 }
 
 .filter-reset {
@@ -94,11 +96,24 @@ body {
   text-transform: none;
 }
 
-.button.booking {
-  padding: 0;
+.subscription {
+  background-color: #82B3D3;
+  padding: 12px 15px;
+  border-radius: 0 10px 10px 0;
+}
+
+.booking {
+  padding: 12px 15px;
   margin: 0 auto;
   min-width: 574px;
 }
+
+.more-results {
+  background-color: #82B3D3;
+  color: #ffffff;
+  padding: 12px 22px;
+}
+
 
 /* Header */
 
@@ -109,14 +124,25 @@ body {
 }
 
 .header-logo {
-  display: block;
   margin: 0 30px 0 0;
+}
+
+.header-logo-img {
+  position: relative;
+  display: block;
+  margin: 0;
 }
 
 .navigation {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -131,7 +157,7 @@ body {
 }
 
 .navigation-user-list-wrapper {
-  width: 264px;
+  min-width: 264px;
   display: flex;
 }
 
@@ -140,6 +166,11 @@ body {
   margin: 0 20px 0 0;
   padding: 0;
   list-style: none;
+}
+
+.navigation-user-item {
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-link,
@@ -159,6 +190,18 @@ body {
 .navigation-user-link {
   min-width: 42px;
   min-height: 66px;
+}
+
+.navigation-user-item:nth-child(1) .navigation-user-link {
+  background-image: url(../images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-item:nth-child(2) .navigation-user-link {
+  background-image: url(../images/icon-favorite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Index text blocks */
@@ -250,7 +293,7 @@ body {
 }
 
 .serviece-list-item {
-  padding: 182px 0 0;
+  padding: 80px 0 0;
   width: 400px;
 }
 
@@ -312,6 +355,24 @@ body {
   margin: 0 auto 92px;
 }
 
+.serviece-list-item:nth-child(1) .srviece-list-item-title::before {
+  display: block;
+  content: url(../images/icon-house.svg);
+  margin: 0 auto 30px;
+}
+
+.serviece-list-item:nth-child(2) .srviece-list-item-title::before {
+  display: block;
+  content: url(../images/icon-food.svg);
+  margin: 0 auto 30px;
+}
+
+.serviece-list-item:nth-child(3) .srviece-list-item-title::before {
+  display: block;
+  content: url(../images/icon-gift.svg);
+  margin: 0 auto 30px;
+}
+
 /* Action form */
 
 .action {
@@ -349,6 +410,26 @@ body {
   color: #000000;
 }
 
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscription-field {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  min-width: 600px;
+  padding-left: 22px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.alternative-footer-field {
+  background-color: #F2F2F2;
+}
+
 /* Filter */
 
 .filter-wrapper {
@@ -370,6 +451,8 @@ body {
 
 .breadcrums {
   display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
@@ -377,12 +460,42 @@ body {
   padding: 0;
 }
 
+.breadcrums-item {
+  margin: auto 26px auto 0;
+}
+
 .breadcrums-link {
+  position: relative;
+  display: flex;
+  min-width: 12px;
   color: inherit;
   font-size: inherit;
   line-height: inherit;
   text-decoration: none;
-  margin-right: 26px;
+
+}
+
+.breadcrums-link::before {
+  position: absolute;
+  content: url(../images/breadcrub-slash.svg);
+  top: auto;
+  bottom: auto;
+  left: -16px;
+}
+
+
+
+.breadcrums-item:first-child .breadcrums-link::before {
+  content: none;
+}
+
+.breadcrums-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .header-filter-form {
@@ -439,6 +552,7 @@ body {
   width: auto;
   margin: 0;
   padding: 50px 76px 56px;
+  align-items: center;
 }
 
 .search-filter-title {
@@ -451,12 +565,15 @@ body {
 }
 
 .search-filter-select {
+  box-sizing: border-box;
   width: 290px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   margin: 0 78px 0 0;
-  padding: 0;
+  padding: 14px 0 14px 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .search-filter-list {
@@ -469,13 +586,42 @@ body {
 }
 
 .search-filter-item {
-  min-width: 48px;
-  min-height: 48px;
   margin-right: 8px;
 }
 
 .search-filter-item:last-child {
   margin-right: 0;
+}
+
+.search-filter-view-button {
+  display: block;
+  box-sizing: border-box;
+  min-width: 48px;
+  min-height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.search-filter-view-button.selected {
+  border-color: #000000;
+}
+
+.search-filter-item:nth-child(1) .search-filter-view-button {
+  background-image: url(../images/filter-view-cards.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-filter-item:nth-child(2) .search-filter-view-button {
+  background-image: url(../images/filter-view-whole-display.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-filter-item:nth-child(3) .search-filter-view-button {
+  background-image: url(../images/filter-view-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -537,6 +683,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 4px;
+  padding: 9px 15px 8px;
+}
+
+.product-card-bookmark-button{
+  background-color: #82B3D3;
 }
 
 .product-card-raiting {
@@ -547,6 +699,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   grid-column: 2/3;
+  padding: 9px 22px 8px;
+  border-radius: 4px;
 }
 
 /* Pagination */
@@ -585,10 +739,16 @@ body {
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .pagination-link.two-digit {
   padding: 12px 18px;
+}
+
+.pagination-link.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
 }
 
 .page-result-total,
@@ -605,9 +765,12 @@ body {
 }
 
 .page-result-select {
+  box-sizing: border-box;
   width: 160px;
   margin: 0;
-  padding: 0;
+  padding-left: 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 /* Page Footer */
@@ -644,9 +807,20 @@ body {
   list-style: none;
 }
 
-.social-item {
+.social-link {
+  position: relative;
+  display: block;
   min-width: 48px;
   min-height: 40px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .page-footer-contacts {
@@ -668,4 +842,60 @@ body {
 
 .contacts-developer-logo {
   display: block;
+}
+
+/* Conditions */
+
+.navigation-link.current::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  left: 20px;
+  height: 2px;
+  background-color: #756257;
+}
+
+.product-card-info-button:hover,
+.product-card-info-button:focus,
+.button.booking:hover,
+.button.booking:focus,
+.button.navigation-booking:hover,
+.button.navigation-booking:focus {
+  background-color: #615048;
+}
+
+.product-card-info-button:active,
+.button.booking:active,
+.button.navigation-booking:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-info-button:disabled,
+.button.booking:disabled,
+.button.navigation-booking:disabled {
+  background-color: #E5E5E5;
+}
+
+.button.subscription:hover,
+.button.subscription:focus,
+.button.filter-submit:hover,
+.button.filter-submit:focus,
+.product-card-bookmark-button:hover,
+.product-card-bookmark-button:focus,
+.pagination-link:hover:not(.pagination-current),
+.pagination-link:focus:not(.pagination-current),
+.button.more-results:hover:not(.pagination-current),
+.button.more-results:focus:not(.pagination-current) {
+  background-color: #68A2CA;
+}
+
+.button.subscription:active,
+.button.filter-submit:active,
+.product-card-bookmark-button:active,
+.pagination-link:active:not(.pagination-current),
+.button.more-results:active:not(.pagination-current) {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
 }
