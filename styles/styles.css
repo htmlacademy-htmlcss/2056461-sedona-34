@@ -114,6 +114,10 @@ body {
   padding: 12px 22px;
 }
 
+.product-card-bookmark-button.marked {
+  background-color: #7DB54F;
+}
+
 
 /* Header */
 
@@ -193,13 +197,13 @@ body {
 }
 
 .navigation-user-item:nth-child(1) .navigation-user-link {
-  background-image: url(../images/icon-search.svg);
+  background-image: url("../images/icon-search.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .navigation-user-item:nth-child(2) .navigation-user-link {
-  background-image: url(../images/icon-favorite.svg);
+  background-image: url("../images/icon-favorite.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -357,19 +361,19 @@ body {
 
 .serviece-list-item:nth-child(1) .srviece-list-item-title::before {
   display: block;
-  content: url(../images/icon-house.svg);
+  content: url("../images/icon-house.svg");
   margin: 0 auto 30px;
 }
 
 .serviece-list-item:nth-child(2) .srviece-list-item-title::before {
   display: block;
-  content: url(../images/icon-food.svg);
+  content: url("../images/icon-food.svg");
   margin: 0 auto 30px;
 }
 
 .serviece-list-item:nth-child(3) .srviece-list-item-title::before {
   display: block;
-  content: url(../images/icon-gift.svg);
+  content: url("../images/icon-gift.svg");
   margin: 0 auto 30px;
 }
 
@@ -603,19 +607,19 @@ body {
 }
 
 .search-filter-item:nth-child(1) .search-filter-view-button {
-  background-image: url(../images/filter-view-cards.svg);
+  background-image: url("../images/filter-view-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .search-filter-item:nth-child(2) .search-filter-view-button {
-  background-image: url(../images/filter-view-whole-display.svg);
+  background-image: url("../images/filter-view-whole-display.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .search-filter-item:nth-child(3) .search-filter-view-button {
-  background-image: url(../images/filter-view-list.svg);
+  background-image: url("../images/filter-view-list.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -683,8 +687,16 @@ body {
   padding: 9px 15px 8px;
 }
 
-.product-card-bookmark-button{
+.product-card-bookmark-button {
   background-color: #82B3D3;
+}
+
+.product-card-stars {
+  content: url("../images/icon-rating.svg");
+  display: flex;
+  align-self: center;
+  grid-column: 1/2;
+  margin-right: 6px;
 }
 
 .product-card-raiting {
@@ -870,7 +882,10 @@ body {
 
 .product-card-info-button:disabled,
 .button.booking:disabled,
-.button.navigation-booking:disabled {
+.button.navigation-booking:disabled,
+.button.subscription:disabled,
+.button.filter-submit:disabled,
+.product-card-bookmark-button:disabled {
   background-color: #E5E5E5;
 }
 
@@ -893,5 +908,79 @@ body {
 .pagination-link:active:not(.pagination-current),
 .button.more-results:active:not(.pagination-current) {
   background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-bookmark-button.marked:hover,
+.product-card-bookmark-button.marked:focus {
+  background-color: #6C9E42;
+}
+
+.product-card-bookmark-button.marked:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-bookmark-button.marked:disabled {
+  background-color: #E5E5E5;
+}
+
+.social-icon {
+  fill: #83B3D3;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.contacts-developer:hover .contacts-developer-logo,
+.contacts-developer:focus .contacts-developer-logo {
+  fill: #756157;
+}
+
+.contacts-developer:active .contacts-developer-logo {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.search-filter-view-button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.search-filter-view-button:hover,
+.search-filter-view-button:active {
+  border: 2px solid #000000;
+}
+
+.breadcrums-icon {
+  fill: #ffffff;
+}
+
+.breadcrums-link:hover .breadcrums-icon {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrums-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrums-link:active .breadcrums-icon {
+ fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrums-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
