@@ -81,11 +81,39 @@ body {
   padding: 9px 15px 8px;
 }
 
+.button.navigation-booking:hover,
+.button.navigation-booking:focus {
+  background-color: #615048;
+}
+
+.button.navigation-booking:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.navigation-booking:disabled {
+  background-color: #E5E5E5;
+}
+
 .filter-submit {
   background-color: #82B3D3;
   font-size: 16px;
   line-height: 20px;
   padding: 14px 15px;
+}
+
+.button.filter-submit:hover,
+.button.filter-submit:focus {
+  background-color: #68A2CA;
+}
+
+.button.filter-submit:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.filter-submit:disabled {
+  background-color: #E5E5E5;
 }
 
 .filter-reset {
@@ -103,11 +131,39 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
+.button.subscription:hover,
+.button.subscription:focus {
+  background-color: #68A2CA;
+}
+
+.button.subscription:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.subscription:disabled {
+  background-color: #E5E5E5;
+}
+
 .booking {
   padding: 12px 15px;
   margin: 0 auto;
   min-width: 574px;
   min-height: 60px;
+}
+
+.button.booking:hover,
+.button.booking:focus {
+  background-color: #615048;
+}
+
+.button.booking:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.booking:disabled {
+  background-color: #E5E5E5;
 }
 
 .more-results {
@@ -116,10 +172,33 @@ body {
   padding: 12px 22px;
 }
 
+.button.more-results:hover:not(.pagination-current),
+.button.more-results:focus:not(.pagination-current) {
+  background-color: #68A2CA;
+}
+
+.button.more-results:active:not(.pagination-current) {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .product-card-bookmark-button.marked {
   background-color: #7DB54F;
 }
 
+.product-card-bookmark-button.marked:hover,
+.product-card-bookmark-button.marked:focus {
+  background-color: #6C9E42;
+}
+
+.product-card-bookmark-button.marked:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-bookmark-button.marked:disabled {
+  background-color: #E5E5E5;
+}
 
 /* Header */
 
@@ -192,6 +271,16 @@ body {
 
 .navigation-link {
   padding: 20px 17px;
+}
+
+.navigation-link.current::before {
+  content: "";
+  position: absolute;
+  right: 17px;
+  bottom: 5px;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation-user-link {
@@ -268,7 +357,7 @@ body {
   width: 360px;
   height: 46px;
   bottom: -15px;
-  left: -5px;
+  left: -6px;
   transform: rotate(9deg);
   z-index: 1;
 }
@@ -280,7 +369,7 @@ body {
   width: 360px;
   height: 46px;
   bottom: -15px;
-  right: -5px;
+  right: -6px;
   transform: rotate(-9deg);
   z-index: 1;
 }
@@ -507,6 +596,8 @@ body {
   background-size: 100% auto;
   margin: 0;
   padding: 35px 70px 70px;
+  box-sizing: border-box;
+  height: 403px; /* установлен временно для проверки перфект пиксель*/
 }
 
 .catalog-header-title {
@@ -551,6 +642,23 @@ body {
   margin-right: 10px;
 }
 
+
+.breadcrums-link:hover .breadcrums-icon {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrums-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrums-link:active .breadcrums-icon {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrums-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .breadcrums-icon {
   display: inline-block;
   position: absolute;
@@ -559,6 +667,10 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+.breadcrums-icon {
+  fill: #ffffff;
 }
 
 .header-filter-form {
@@ -614,11 +726,12 @@ body {
   display: flex;
   width: auto;
   margin: 0;
-  padding: 50px 76px 56px;
+  padding: 54px 72px 53px;
   align-items: center;
 }
 
 .search-filter-title {
+  text-transform: uppercase;
   min-width: 340px;
   font-weight: 700;
   font-size: 30px;
@@ -667,6 +780,15 @@ body {
 
 .search-filter-view-button.selected {
   border-color: #000000;
+}
+
+.search-filter-view-button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.search-filter-view-button:hover,
+.search-filter-view-button:active {
+  border: 2px solid #000000;
 }
 
 .search-filter-item:nth-child(1) .search-filter-view-button {
@@ -721,6 +843,7 @@ body {
 }
 
 .product-card-img {
+  display: block;
   margin: 0 0 16px;
   object-fit: contain;
   background-color: #ffffff;
@@ -728,6 +851,10 @@ body {
 
 .product-card-title {
   margin: 0;
+  font-style: "PT Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .product-card-text {
@@ -750,8 +877,36 @@ body {
   padding: 9px 15px 8px;
 }
 
+.product-card-info-button:hover,
+.product-card-info-button:focus {
+  background-color: #615048;
+}
+
+.product-card-info-button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-info-button:disabled {
+  background-color: #E5E5E5;
+}
+
 .product-card-bookmark-button {
   background-color: #82B3D3;
+}
+
+.product-card-bookmark-button:hover,
+.product-card-bookmark-button:focus {
+  background-color: #68A2CA;
+}
+
+.product-card-bookmark-button:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.product-card-bookmark-button:disabled {
+  background-color: #E5E5E5;
 }
 
 .product-card-stars {
@@ -811,6 +966,16 @@ body {
   line-height: 36px;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.pagination-link:hover:not(.pagination-current),
+.pagination-link:focus:not(.pagination-current) {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active:not(.pagination-current) {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-link.two-digit {
@@ -894,6 +1059,19 @@ body {
   margin: auto;
 }
 
+.social-icon {
+  fill: #83B3D3;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .page-footer-contacts {
   width: 331px;
   margin: 0;
@@ -909,96 +1087,6 @@ body {
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-}
-
-.contacts-developer-logo {
-  display: block;
-}
-
-/* Conditions */
-
-.navigation-link.current::before {
-  content: "";
-  position: absolute;
-  right: 17px;
-  bottom: 5px;
-  left: 17px;
-  height: 2px;
-  background-color: #756257;
-}
-
-.product-card-info-button:hover,
-.product-card-info-button:focus,
-.button.booking:hover,
-.button.booking:focus,
-.button.navigation-booking:hover,
-.button.navigation-booking:focus {
-  background-color: #615048;
-}
-
-.product-card-info-button:active,
-.button.booking:active,
-.button.navigation-booking:active {
-  background-color: #756157;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.product-card-info-button:disabled,
-.button.booking:disabled,
-.button.navigation-booking:disabled,
-.button.subscription:disabled,
-.button.filter-submit:disabled,
-.product-card-bookmark-button:disabled {
-  background-color: #E5E5E5;
-}
-
-.button.subscription:hover,
-.button.subscription:focus,
-.button.filter-submit:hover,
-.button.filter-submit:focus,
-.product-card-bookmark-button:hover,
-.product-card-bookmark-button:focus,
-.pagination-link:hover:not(.pagination-current),
-.pagination-link:focus:not(.pagination-current),
-.button.more-results:hover:not(.pagination-current),
-.button.more-results:focus:not(.pagination-current) {
-  background-color: #68A2CA;
-}
-
-.button.subscription:active,
-.button.filter-submit:active,
-.product-card-bookmark-button:active,
-.pagination-link:active:not(.pagination-current),
-.button.more-results:active:not(.pagination-current) {
-  background-color: #82B3D3;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.product-card-bookmark-button.marked:hover,
-.product-card-bookmark-button.marked:focus {
-  background-color: #6C9E42;
-}
-
-.product-card-bookmark-button.marked:active {
-  background-color: #7DB54F;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.product-card-bookmark-button.marked:disabled {
-  background-color: #E5E5E5;
-}
-
-.social-icon {
-  fill: #83B3D3;
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: #68A2CA;
-}
-
-.social-link:active .social-icon {
-  fill: rgba(104, 162, 202, 0.3);
 }
 
 .contacts-phone:hover,
@@ -1017,33 +1105,4 @@ body {
 
 .contacts-developer:active .contacts-developer-logo {
   fill: rgba(117, 97, 87, 0.3);
-}
-
-.search-filter-view-button:focus {
-  border: 2px solid #68A2CA;
-}
-
-.search-filter-view-button:hover,
-.search-filter-view-button:active {
-  border: 2px solid #000000;
-}
-
-.breadcrums-icon {
-  fill: #ffffff;
-}
-
-.breadcrums-link:hover .breadcrums-icon {
-  fill: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrums-link:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrums-link:active .breadcrums-icon {
- fill: rgba(255, 255, 255, 0.3);
-}
-
-.breadcrums-link:active {
-  color: rgba(255, 255, 255, 0.3);
 }
