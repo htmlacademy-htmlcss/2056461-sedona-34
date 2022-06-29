@@ -98,6 +98,7 @@ body {
 
 .subscription {
   background-color: #82B3D3;
+  min-width: 200px;
   padding: 12px 15px;
   border-radius: 0 10px 10px 0;
 }
@@ -106,6 +107,7 @@ body {
   padding: 12px 15px;
   margin: 0 auto;
   min-width: 574px;
+  min-height: 60px;
 }
 
 .more-results {
@@ -135,6 +137,7 @@ body {
   position: relative;
   display: block;
   margin: 0;
+  z-index: 2;
 }
 
 .navigation {
@@ -179,16 +182,16 @@ body {
 
 .navigation-link,
 .navigation-user-link {
+  box-sizing: border-box;
   display: block;
   font-weight: 700;
   font-size: 20px;
   color: #000000;
-  text-align: left;
   text-decoration: none;
 }
 
 .navigation-link {
-  padding: 17px 20px;
+  padding: 20px 17px;
 }
 
 .navigation-user-link {
@@ -216,17 +219,75 @@ body {
 }
 
 .main-index-greeding {
+  position: relative;
   color: #ffffff;
   background-color: #756157;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  padding: 51px 0 82px;
+  padding: 51px 0 0;
+  overflow: hidden;
+}
+
+.main-index-greeding::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 30%;
+  height: 60px;
+  bottom: -20px;
+  left: -5px;
+  transform: rotate(5.5deg);
+  z-index: 1;
+}
+
+.main-index-greeding::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 30%;
+  height: 60px;
+  bottom: -20px;
+  right: -5px;
+  transform: rotate(-5.5deg);
+  z-index: 1;
+}
+
+.decorative-spikes {
+  position: relative;
+  width: 700px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.decorative-spikes::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 360px;
+  height: 46px;
+  bottom: -15px;
+  left: -5px;
+  transform: rotate(9deg);
+  z-index: 1;
+}
+
+.decorative-spikes::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 360px;
+  height: 46px;
+  bottom: -15px;
+  right: -5px;
+  transform: rotate(-9deg);
+  z-index: 1;
 }
 
 .index-lettering {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 23px;
 }
 
 .main-index-slogan,
@@ -240,6 +301,7 @@ body {
 }
 
 .benefits-title {
+  position: relative;
   margin: 0;
   padding: 63px 0 0;
 }
@@ -269,7 +331,7 @@ body {
 }
 
 .benefits-point:not(.point-with-img) {
-  padding: 92px 0 0;
+  padding: 103px 0 103px;
   width: 400px;
 }
 
@@ -321,7 +383,7 @@ body {
 
 .serviece-list-item-text {
   text-align: center;
-  margin: 0 auto 81px;
+  margin: 0 auto 77px;
 }
 
 .benefits-point:nth-child(1),
@@ -356,25 +418,25 @@ body {
 
 .benefits-point-text {
   text-align: center;
-  margin: 0 auto 92px;
+  margin: 0 auto 0;
 }
 
 .serviece-list-item:nth-child(1) .srviece-list-item-title::before {
   display: block;
   content: url("../images/icon-house.svg");
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
 }
 
 .serviece-list-item:nth-child(2) .srviece-list-item-title::before {
   display: block;
   content: url("../images/icon-food.svg");
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
 }
 
 .serviece-list-item:nth-child(3) .srviece-list-item-title::before {
   display: block;
   content: url("../images/icon-gift.svg");
-  margin: 0 auto 30px;
+  margin: 0 auto 22px;
 }
 
 /* Action form */
@@ -421,6 +483,7 @@ body {
 
 .subscription-field {
   box-sizing: border-box;
+  font-family: "PT Sans";
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -692,11 +755,11 @@ body {
 }
 
 .product-card-stars {
-  content: url("../images/icon-rating.svg");
-  display: flex;
-  align-self: center;
+  background-image: url("../images/icon-rating.svg");
+  background-repeat: repeat-x;
+  background-position: left;
+  width: 72px;
   grid-column: 1/2;
-  margin-right: 6px;
 }
 
 .product-card-raiting {
@@ -803,7 +866,7 @@ body {
 .page-contacts-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -857,9 +920,9 @@ body {
 .navigation-link.current::before {
   content: "";
   position: absolute;
-  right: 20px;
+  right: 17px;
   bottom: 5px;
-  left: 20px;
+  left: 17px;
   height: 2px;
   background-color: #756257;
 }
