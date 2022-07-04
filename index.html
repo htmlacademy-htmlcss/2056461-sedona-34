@@ -191,6 +191,32 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal-container">
+      <form class="modal-booking-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="modal-fieldset">
+          <legend class="modal-legend">Поиск гостиницы в Седоне</legend>
+          <button class="modal-close">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <label class="modal-label" for="arrival-date">Дата заезда:</label>
+          <input class="modal-input" type="date" name="arrival-date" id="arrival-date" placeholder="27 апреля 2020">
+          <span class="date-comment">Мы не можем отправить вас в прошлое.</span>
+          <label class="modal-label" for="departure-date">Дата выезда:</label>
+          <input class="modal-input" type="date" name="departure-date" id="departure-date" placeholder="1 сентября 2021">
+          <span class="date-comment">На эти даты есть свободные номера. Пока есть.</span>
+          <label class="modal-label adults-lable" for="adults">Взрослые:</label>
+          <input class="modal-input adults-input" type="number" name="adults-number" id="adults">
+          <label class="modal-label kids-lable" for="kids">Дети:
+            <span class="visually-hidden kids-info">Справка</span>
+            <p class="popover-info-kids">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+          </label>
+          <input class="modal-input kids-input" type="number" name="kids-number" id="kids">
+          <button class="button modal-button">Найти</button>
+        </fieldset>
+      </form>
+    </div>
+
   </body>
 
 </html>
