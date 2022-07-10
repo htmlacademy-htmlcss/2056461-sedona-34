@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./images/favicon.png" sizes="32x32" type="image/png">
   </head>
 
   <body>
@@ -31,7 +32,10 @@
                 <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
               </li>
               <li class="navigation-user-item">
-                <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
+                <a href="#" class="navigation-user-link">
+                  <span class="visually-hidden">Избранное</span>
+                  <span class="bookmarks-counter">12</span>
+                </a>
               </li>
             </ul>
             <button class="button navigation-booking">Хочу сюда!</button>
@@ -260,7 +264,8 @@
       <footer class="page-footer">
         <section class="page-footer-subscription alternative-footer-background">
           <h2 class="subscription-title alternative-footer-font">Подпишитесь на рассылку</h2>
-          <p class="subscription-text alternative-footer-font">Только полезная информация и никакого спама,<br> честное
+          <p class="subscription-text alternative-footer-font">&nbspТолько полезная информация и никакого спама,<br>
+            честное
             бойскаутское!</p>
           <form class="subscription-form alternative-footer-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="email">Форма подписки на новости</label>
@@ -326,6 +331,7 @@
             </address>
           </section>
           <section class="page-footer-developer">
+            <h2 class="visually-hidden">Разработчик</h2>
             <a class="contacts-developer" href="https://htmlacademy.ru/">
               <svg class="contacts-developer-logo" aria-hidden="true" focusable="false" width="115" height="34"
                 xmlns="http://www.w3.org/2000/svg">
