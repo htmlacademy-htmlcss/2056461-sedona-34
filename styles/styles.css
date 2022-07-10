@@ -631,7 +631,7 @@ body {
   color: #ffffff;
   background-image: url("../images/subscription-area-background.jpg");
   background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 .alternative-footer-background {
@@ -679,8 +679,8 @@ body {
   background-color: #756157;
   color: #ffffff;
   background-image: url("../images/filter-background.jpg");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   margin: 0;
   padding: 35px 70px 70px;
 }
@@ -1394,7 +1394,7 @@ body {
 }
 
 .subscription-title {
-  margin: 0 290px 29px;
+  margin: 0 290px 28px;
 }
 
 .subscription-text {
