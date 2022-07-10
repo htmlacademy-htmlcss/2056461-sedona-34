@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./images/favicon.png" sizes="32x32" type="image/png">
   </head>
 
   <body>
@@ -19,7 +20,7 @@
               <a class="navigation-link current">Главная</a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link">О Седоне</a>
+              <a href="#about" class="navigation-link">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a href="catalog.html" class="navigation-link">Гостиницы</a>
@@ -31,7 +32,10 @@
                 <a href="#" class="navigation-user-link"><span class="visually-hidden">Поиск</span></a>
               </li>
               <li class="navigation-user-item">
-                <a href="#" class="navigation-user-link"><span class="visually-hidden">Избранное</span></a>
+                <a href="#" class="navigation-user-link">
+                  <span class="visually-hidden">Избранное</span>
+                  <span class="bookmarks-counter">12</span>
+                </a>
               </li>
             </ul>
             <button class="button navigation-booking">Хочу сюда!</button>
@@ -48,14 +52,15 @@
         <section class="idex-benefits">
           <div class="benefits-title">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <p class="main-index-slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+            <p class="main-index-slogan"><a name="about"></a>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
             <p class="main-index-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
           <ol class="benefits-list">
             <li class="benefits-point point-with-img">
               <div class="benefits-point-wrapper">
                 <h3 class="benefits-point-title">Настоящий городок</h3>
-                <p class="benefits-point-text"><span class="benefits-point-number">-№1-</span>Седона — не аттракцион для
+                <p class="benefits-point-text"><span class="benefits-point-number">— №1 —</span>Седона — не аттракцион
+                  для
                   туристов, там течёт своя жизнь</p>
               </div>
               <img class="benefits-img" src="images/sedona-old-city.jpg" width="800" height="384"
@@ -82,23 +87,25 @@
                 alt="Знаменитый каньон вблизи города Седона">
               <div class="benefits-point-wrapper">
                 <h3 class="benefits-point-title">Там есть<br> мост дьявола</h3>
-                <p class="benefits-point-text"><span class="benefits-point-number">-№2-</span>Да, по нему можно пройти!
+                <p class="benefits-point-text"><span class="benefits-point-number">— №2 —</span>Да, по нему можно
+                  пройти!
                   Если вы осмелитесь, разумеется</p>
               </div>
             </li>
             <li class="benefits-point">
               <h3 class="benefits-point-title">Небольшая площадь</h3>
-              <p class="benefits-point-text"><span class="benefits-point-number">-№3-</span>Все достопримечательности
+              <p class="benefits-point-text"><span class="benefits-point-number">— №3 —</span>Все достопримечательности
                 находятся очень близко</p>
             </li>
             <li class="benefits-point">
               <h3 class="benefits-point-title">Красивая<br> дорога</h3>
-              <p class="benefits-point-text"><span class="benefits-point-number">-№4-</span>Ехать в Седону из Лас-Вегаса
+              <p class="benefits-point-text"><span class="benefits-point-number">— №4 —</span>Ехать в Седону из
+                Лас-Вегаса
                 совсем не скучно!</p>
             </li>
             <li class="benefits-point">
               <h3 class="benefits-point-title">Мало<br> туристов</h3>
-              <p class="benefits-point-text"><span class="benefits-point-number">-№5-</span>Большинство едет в Гранд
+              <p class="benefits-point-text"><span class="benefits-point-number">— №5 —</span>Большинство едет в Гранд
                 Каньон и толпится там</p>
             </li>
           </ol>
@@ -107,14 +114,14 @@
           <h2 class="visually-hidden">Бронирование</h2>
           <p class="action-question">Заинтересовались?</p>
           <p class="action-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
-            Седоне</p>
+            Седоне&nbsp&nbsp&nbsp</p>
           <button class="button booking">Поиск гостиницы в Седоне</button>
         </section>
       </main>
       <footer class="page-footer">
         <section class="page-footer-subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-          <p class="subscription-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+          <p class="subscription-text">&nbspТолько полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="email">Форма подписки на новости</label>
             <input class="subscription-field" type="email" id="email" name="email" placeholder="Ваш e-mail">
@@ -178,6 +185,7 @@
             </address>
           </section>
           <section class="page-footer-developer">
+            <h2 class="visually-hidden">Разработчик</h2>
             <a class="contacts-developer" href="https://htmlacademy.ru/">
               <svg class="contacts-developer-logo" aria-hidden="true" focusable="false" width="115" height="34"
                 xmlns="http://www.w3.org/2000/svg">
@@ -201,8 +209,7 @@
               <span class="visually-hidden">Закрыть</span>
               <svg class="icon-modal-close" width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"
-                  />
+                  d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" />
               </svg>
             </button>
           </div>
@@ -212,9 +219,10 @@
               <input class="modal-input" type="text" name="arrival-date" id="arrival-date" placeholder="27 апреля 2020">
               <span class="date-comment mistake-allert">Мы не можем отправить вас в прошлое.</span>
             </div>
-            <label class="modal-label" for="arrival-date">Дата Выезда:</label>
+            <label class="modal-label" for="departure-date">Дата Выезда:</label>
             <div class="modal-input-wrap">
-              <input class="modal-input" type="text" name="arrival-date" id="arrival-date" placeholder="1 сентября 2021">
+              <input class="modal-input" type="text" name="departure-date" id="departure-date"
+                placeholder="1 сентября 2021">
               <span class="date-comment approve-allert">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <label class="modal-label adults-lable" for="adults">Взрослые:</label>
