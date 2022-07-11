@@ -76,8 +76,8 @@ body {
 }
 
 .navigation-booking {
-  min-width: 160px;
-  max-width: 200px;
+  width: 160px;
+  height: fit-content;
   font-size: 16px;
   line-height: 20px;
   margin: 14px 0 19px;
@@ -1184,6 +1184,14 @@ body {
   grid-column: 1/-1;
 }
 
+.product-card-link:hover {
+  box-shadow: 0 0 0 3px #E6E6E6;
+}
+
+.product-card-link:active {
+  opacity: 60%;
+}
+
 .product-card-img {
   display: block;
   margin: 0 0 16px;
@@ -1217,6 +1225,7 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   padding: 9px 15px 8px;
+  align-self: center;
 }
 
 .product-card-info-button:hover,
@@ -1256,7 +1265,7 @@ body {
 .product-card-stars {
   background-image: url("../images/icon-rating.svg");
   background-repeat: repeat-x;
-  background-position: left;
+  background-position: left center;
   width: 72px;
   grid-column: 1/2;
 }
@@ -1271,6 +1280,7 @@ body {
   grid-column: 2/3;
   padding: 9px 22px 8px;
   border-radius: 4px;
+  align-self: center;
 }
 
 /* Pagination */
@@ -1506,11 +1516,11 @@ body {
   background-color: #F2F2F280;
   z-index: 2;
 }
-
+/*
 .container-hide {
   display: none;
 }
-
+*/
 .modal-booking-form {
   box-sizing: border-box;
   align-self: center;
@@ -1750,6 +1760,7 @@ input:-moz-placeholder {
   width: 133px;
   background-image: none;
   padding: 15px 62px 14px;
+  -moz-appearance: textfield;
 }
 
 .kids-info-lable {
@@ -1766,6 +1777,7 @@ input:-moz-placeholder {
   width: 133px;
   background-image: none;
   padding: 15px 61px 14px;
+  -moz-appearance: textfield;
 }
 
 .tooltip-popup {
